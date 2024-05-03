@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite de Testes">
+    <test name="Teste de Registro">
+        <classes>
+            <class name="com.example.RegisterTestAllure"/> <!-- O caminho da sua classe de teste -->
+        </classes>
+    </test>
+</suite>
