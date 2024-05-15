@@ -75,6 +75,47 @@ mvn dependency:purge-local-repository
 Passo 7: Adicionar o allure report as variaveis de ambiente
 https://github.com/allure-framework/allure2/releases 
 
+
+Passo 8: Rodar os Testes
+
+- Para rodar o teste sem report Allure `RegisterTestt.java`, com a extensão instalada será possível ao clicar com o botão direito no arquivo de teste, escolher a opção `Run Java` 
+
+![RODAR_TESTES](imgs\rodar_testes.png)
+    
+- Para rodar o teste com report Allure `RegisterTestAllure.java` 
+
+    - instalar a extensão  [TestNg TestSuite Runner](https://marketplace.visualstudio.com/items?itemName=DebrajBhal.testng-testsuite-runner) 
+    - rodar o comando da imagem 
+
+![RODAR_TESTES](imgs\execucar_test_allure.png)
+
+
+Passo 9: Gerar Relatórios do Allure usando a CLI
+
+- Use a linha de comando para gerar um relatório Allure a partir dos dados 
+```
+allure generate -c -o allure-report allure-results
+```
+- Depois de gerar o relatório, você pode exibi-lo localmente em um navegador:
+
+```
+allure serve allure-results
+```
+
+---
+
+### Extensões uteis 
+
+Name: [Allure Support](https://marketplace.visualstudio.com/items?itemName=qameta.allure-vscode)
+Name: [Extension Pack for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack)
+Name: [Java Language Support](https://marketplace.visualstudio.com/items?itemName=georgewfraser.vscode-javac)
+Name: [Language Support for Java(TM) by Red Hat](https://marketplace.visualstudio.com/items?itemName=redhat.java)
+Name: [Maven for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-maven)
+Name: [Project Manager for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-dependency)
+Name: [Test Runner for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-test)
+Name: [TestNg TestSuite Runner: ](https://marketplace.visualstudio.com/items?itemName=DebrajBhal.testng-testsuite-runner)
+
+
 ### Artigos de referência
 [Como instalar o maven no Windows](https://dicasdeprogramacao.com.br/como-instalar-o-maven-no-windows/)
 
@@ -84,4 +125,8 @@ https://github.com/allure-framework/allure2/releases
 
 [Erro: Google Exception in thread "main" org.openqa.selenium.remote.http.ConnectionFailedException: Unable to establish websocket connection to http://localhost:56310](https://www.youtube.com/watch?v=eRQiSt0er4Y)
 
-[Veja a minha conversa com o chatGPT para este projeto](https://chat.openai.com/share/63b4581e-296c-4c38-bb1f-8619bcff800f)
+[Allure report com JUNIT 5](https://allurereport.org/docs/junit5/)
+
+[Veja a minha conversa com o chatGPT para configurar este projeto](https://chat.openai.com/share/63b4581e-296c-4c38-bb1f-8619bcff800f)
+
+[Veja a minha conversa com o chatGPT para gerar o report deste projeto](https://chatgpt.com/c/44038b2c-0b73-4f4b-aa57-343514f8b72c)
